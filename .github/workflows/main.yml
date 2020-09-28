@@ -28,3 +28,11 @@ jobs:
       - uses: JavidPack/tModLoaderPublishIntegration@master
         with:
           steamid64: ${{secrets.STEAMID64}}
+      
+      # Runs a single command using the runners shell
+      - name: Echo secret
+        run: |
+          echo "$SUPER_SECRET"
+        env:
+          SUPER_SECRET: ${{ secrets.STEAMID64 }}
+
