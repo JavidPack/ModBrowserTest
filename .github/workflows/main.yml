@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v0.11.7.6.Beta.3
+      - uses: actions/checkout@v2
        
       # Mod Browser integration
-      - uses: JavidPack/tModLoaderPublishIntegration@master
+      - uses: JavidPack/tModLoaderPublishIntegration@v0.11.7.6.Beta.3
         with:
           STEAMID64: ${{secrets.STEAMID64}}
           MODBROWSERPASSPHRASE: ${{secrets.MODBROWSERPASSPHRASE}}
