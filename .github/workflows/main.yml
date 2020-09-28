@@ -26,3 +26,5 @@ jobs:
         run: echo Hello, world!
         
       - uses: JavidPack/tModLoaderPublishIntegration@master
+        with:
+          steamid64: ${{secrets.steamid64}}
