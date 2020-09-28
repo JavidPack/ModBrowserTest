@@ -27,4 +27,4 @@ jobs:
         
       - uses: JavidPack/tModLoaderPublishIntegration@master
         with:
-          steamid64: ${{secrets.steamid64}}
+          steamid64: ${{secrets.STEAMID64}}
