@@ -1,1 +1,1 @@
-Mod Browser Test is a mod to test github actions.
+Mod Browser Test is a mod to test github actions. It's working.
