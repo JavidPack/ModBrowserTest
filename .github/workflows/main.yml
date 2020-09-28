@@ -23,11 +23,11 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo Hello, world!!
         
       - uses: JavidPack/tModLoaderPublishIntegration@master
         with:
-          steamid64: ${{secrets.STEAMID64}}
+          STEAMID64: ${{secrets.STEAMID64}}
           MODBROWSERPASSPHRASE: ${{secrets.MODBROWSERPASSPHRASE}}
       
       # Runs a single command using the runners shell
