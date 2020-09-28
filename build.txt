@@ -1,3 +1,3 @@
 displayName = Mod Browser Test
 author = jopojelly
-version = 0.1
+version = 1.2
