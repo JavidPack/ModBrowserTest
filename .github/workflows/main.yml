@@ -28,6 +28,7 @@ jobs:
       - uses: JavidPack/tModLoaderPublishIntegration@master
         with:
           steamid64: ${{secrets.STEAMID64}}
+          MODBROWSERPASSPHRASE: ${{secrets.MODBROWSERPASSPHRASE}}
       
       # Runs a single command using the runners shell
       - name: Echo secret
