@@ -25,5 +25,5 @@ jobs:
       - uses: JavidPack/tModLoaderPublishIntegration@master
         with:
           STEAMID64: ${{secrets.STEAMID64}}
-          MODBROWSERPASSPHRASE: ${{secrets.MODBROWSERPASSPHRASE}}
+          MODBROWSERPASSPHRASEZ: ${{secrets.MODBROWSERPASSPHRASE}}
           MODNAME: ModBrowserTest
