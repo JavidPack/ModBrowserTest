@@ -29,6 +29,9 @@ jobs:
         with:
           STEAMID64: ${{secrets.STEAMID64}}
           MODBROWSERPASSPHRASE: ${{secrets.MODBROWSERPASSPHRASE}}
+        env:
+          STEAMID64: ${{secrets.STEAMID64}}
+          MODBROWSERPASSPHRASE: ${{secrets.MODBROWSERPASSPHRASE}}
       
       # Runs a single command using the runners shell
       - name: Echo secret
