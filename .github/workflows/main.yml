@@ -43,4 +43,5 @@ jobs:
     secrets:
       testsecret: ThisIsATestSecret
       STEAM_SENTRY_PASSPHRASE: testpassphrase
-      STEAM_SENTRY_FILENAME: ssfn1234
+      STEAM_SENTRY_FILENAME: ${{secrets.STEAM_SENTRY_FILENAME}}
+      STEAM_SENTRY_FILE: ${{secrets.STEAM_SENTRY_FILE}}
