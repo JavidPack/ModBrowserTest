@@ -42,3 +42,5 @@ jobs:
       testInput: This Is Test Input
     secrets:
       testsecret: ThisIsATestSecret
+      STEAM_SENTRY_PASSPHRASE: testpassphrase
+      STEAM_SENTRY_FILENAME: ssfn1234
