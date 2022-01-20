@@ -36,7 +36,7 @@ jobs:
           name: .tmod file
           path: ~/tModLoader/ModLoader/Mods/BossChecklist.tmod
 
-  AutomaticPublishOriginalReusable:
+  tModLoaderSteamWorkshopAutoPublish:
     uses: JavidPack/tModLoaderPublishIntegration/.github/workflows/BuildAndPublishMod.yml@1.4
     with:
       testInput: This Is Test Input
