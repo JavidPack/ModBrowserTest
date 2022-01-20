@@ -1,25 +1,44 @@
-# This is a basic workflow to help you get started with Actions
+name: Push on 1.4 jobs
 
-name: Push on Master jobs
-
-# Controls when the action will run. Triggers the workflow on push
-# events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [ 1.4 ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  automaticpublish:
+  AutomaticPublishOriginal:
+    if: false
     name: Automatic Mod Browser Publish Integration
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+       
+      - name: Install .NET SDKs
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '6.0.x'
+       
+      - name: Setup steamcmd
+        id: setupsteam
+        uses: CyberAndrii/setup-steamcmd@v1
        
       # Mod Browser integration
-      - uses: JavidPack/tModLoaderPublishIntegration@master
+      - uses: JavidPack/tModLoaderPublishIntegration@1.4
         with:
           STEAMID64: ${{secrets.STEAMID64}}
           MODBROWSERPASSPHRASE: ${{secrets.MODBROWSERPASSPHRASE}}
-          MODNAME: WrongName
+          MODNAME: BossChecklist
+        
+      # Upload artifact for all builds
+      - uses: actions/upload-artifact@v2
+        with:
+          name: .tmod file
+          path: ~/tModLoader/ModLoader/Mods/BossChecklist.tmod
+
+  AutomaticPublishOriginalReusable:
+    uses: JavidPack/tModLoaderPublishIntegration/BuildAndPublishMod.yml@1.4
+    with:
+      testInput: This Is Test Input
+    secrets:
+      testsecret: ThisIsATestSecret
