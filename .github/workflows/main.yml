@@ -37,7 +37,7 @@ jobs:
           path: ~/tModLoader/ModLoader/Mods/BossChecklist.tmod
 
   AutomaticPublishOriginalReusable:
-    uses: JavidPack/tModLoaderPublishIntegration/BuildAndPublishMod.yml@1.4
+    uses: JavidPack/tModLoaderPublishIntegration/.github/workflows/BuildAndPublishMod.yml@1.4
     with:
       testInput: This Is Test Input
     secrets:
