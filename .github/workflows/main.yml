@@ -43,3 +43,5 @@ jobs:
     secrets:
       STEAM_SENTRY_FILENAME: ${{secrets.STEAM_SENTRY_FILENAME}}
       STEAM_SENTRY_FILE: ${{secrets.STEAM_SENTRY_FILE}}
+      STEAM_USERNAME: ${{secrets.STEAM_USERNAME}}
+      STEAM_PASSWORD: ${{secrets.STEAM_PASSWORD}}
